@@ -22,7 +22,7 @@ public class RatesMap {
     }
 
     /**
-     * 
+     * constructs the matrix graph for finding the paths from each curency to USD
      * @param r 
      */
     public void build(Hashtable<String, ArrayList<Rate>> r) {
@@ -66,7 +66,7 @@ public class RatesMap {
     }
 
     /**
-     * 
+     * constructs the pairing for the conversions
      * @param r 
      */
     public void constrConvs2USD(Hashtable<String, ArrayList<Rate>> r) {
