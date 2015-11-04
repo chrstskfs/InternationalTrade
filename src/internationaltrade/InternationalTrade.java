@@ -28,10 +28,10 @@ public class InternationalTrade {
         TransReader myTransReader = null;
         RatesReader myRatesReader = null;
 
-        String fileTrans = "SAMPLE_TRANS.csv";
-        String fileRates = "RATES-SAMPLES.txt"; 
-        //String fileTrans = "TRANS.csv";
-        //String fileRates = "RATES.txt";
+        //String fileTrans = "SAMPLE_TRANS.csv";
+        //String fileRates = "RATES-SAMPLES.txt"; 
+        String fileTrans = "TRANS.csv";
+        String fileRates = "RATES.txt";
 
         String sku = "DM1182";
 

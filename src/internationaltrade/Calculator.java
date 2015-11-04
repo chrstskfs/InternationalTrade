@@ -55,7 +55,6 @@ public class Calculator {
         
         for (Amount a : amountList) {
             if (a.getCurrency().equalsIgnoreCase("USD")) {
-                //tmpUSDlist.add(a.getMoneyAmount().setScale(2, RoundingMode.HALF_EVEN));
                 res = res.add(a.getMoneyAmount().setScale(2, RoundingMode.HALF_EVEN));
             } else {          
                 
