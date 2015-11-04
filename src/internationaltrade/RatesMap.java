@@ -94,20 +94,19 @@ public class RatesMap {
      */
     public double search(String s) {
         d = 1;
-        visited = new int[rates[1].length][rates[1].length];
+        visited = new int[rates[1].length][rates[1].length]; // all positions are = 0, unvisited
         stack.clear();
-        String tmpPos;
-
-        stack.push(s);
+        String tmpCurName;
+        stack.push(s); // push from currency in stack
         while (!stack.isEmpty()) {
-            tmpPos = stack.pop();
-            if (rates[curr.get(tmpPos)][curr.get("USD")] != 0) {
-                d = d * rates[curr.get(tmpPos)][curr.get("USD")];
+            tmpCurName = stack.pop();
+            if (rates[curr.get(tmpCurName)][curr.get("USD")] != 0) {
+                d = d * rates[curr.get(tmpCurName)][curr.get("USD")];
             } 
             else {
                 for (int j = 0; j < rates[0].length; j++) {
-                    if ((rates[curr.get(tmpPos)][j] != 0) && (visited[curr.get(tmpPos)][j] != 1)) {
-                        d = d * rates[curr.get(tmpPos)][j];
+                    if ((rates[curr.get(tmpCurName)][j] != 0) && (visited[curr.get(tmpCurName)][j] != 1)) {
+                        d = d * rates[curr.get(tmpCurName)][j];
                         stack.push(find(j));
                         visited[curr.get(s)][j] = 1;
                         break;
