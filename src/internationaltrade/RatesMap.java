@@ -108,7 +108,7 @@ public class RatesMap {
                     if ((rates[curr.get(tmpCurName)][j] != 0) && (visited[curr.get(tmpCurName)][j] != 1)) {
                         d = d * rates[curr.get(tmpCurName)][j];
                         stack.push(find(j));
-                        visited[curr.get(s)][j] = 1;
+                        visited[curr.get(s)][j] = 1; //set visited
                         break;
                     }
                 }
