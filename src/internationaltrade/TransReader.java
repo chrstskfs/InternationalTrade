@@ -1,6 +1,8 @@
 
 package internationaltrade;
 
+import model.Trans;
+import model.Amount;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;

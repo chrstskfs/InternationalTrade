@@ -1,6 +1,9 @@
 
 package internationaltrade;
 
+import model.Trans;
+import model.Amount;
+import model.Rate;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.math.RoundingMode;

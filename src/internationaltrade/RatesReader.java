@@ -1,6 +1,7 @@
 
 package internationaltrade;
 
+import model.Rate;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -48,22 +49,15 @@ public class RatesReader {
         for (int temp = 0; temp < nList.getLength(); temp++) {
             nNode = nList.item(temp);
             if (nNode.getNodeType() == Node.ELEMENT_NODE) {
-                Element eElement = (Element) nNode;                
-                //System.out.println("from = "+eElement.getElementsByTagName("from").item(0).getTextContent());
-                //System.out.println("to = "+eElement.getElementsByTagName("to").item(0).getTextContent());
-                //System.out.println("conversion = "+eElement.getElementsByTagName("conversion").item(0).getTextContent());
-                
+                Element eElement = (Element) nNode;                                
                 tmpRate = new Rate(eElement.getElementsByTagName("from").item(0).getTextContent(),
                         eElement.getElementsByTagName("to").item(0).getTextContent(),
                         Double.parseDouble(eElement.getElementsByTagName("conversion").item(0).getTextContent()));
                 
-                //this.rates.add(tmpRate);
                 if(!this.rates.containsKey(tmpRate.getFrom())){
                     this.rates.put(tmpRate.getFrom(), new ArrayList<>());
-                }
-                
-                this.rates.get(tmpRate.getFrom()).add(tmpRate);
-                
+                }                
+                this.rates.get(tmpRate.getFrom()).add(tmpRate);                
             }
         }
     }

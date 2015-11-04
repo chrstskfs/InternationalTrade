@@ -1,5 +1,5 @@
 
-package internationaltrade;
+package model;
 
 import java.math.BigDecimal;
 
@@ -8,7 +8,7 @@ import java.math.BigDecimal;
  * @author PC
  */
 
-class Amount {
+public class Amount {
     
     private BigDecimal moneyAmount;
     private String currency;

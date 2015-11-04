@@ -1,5 +1,7 @@
 
-package internationaltrade;
+package model;
+
+import model.Amount;
 
 /**
  * Holds the data for each transaction

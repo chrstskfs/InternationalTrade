@@ -1,6 +1,7 @@
 
 package internationaltrade;
 
+import model.Rate;
 import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.Iterator;
