@@ -4,7 +4,7 @@ package model;
 import model.Amount;
 
 /**
- * Holds the data for each transaction
+ * Holds the data for a transaction
  * @author PC
  */
 public class Trans {
