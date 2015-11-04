@@ -87,7 +87,8 @@ public class RatesMap {
     double d;
 
     /**
-     * Applies a DFS-like search to matrix multiplying the edges value for rach path to USD
+     * Applies a DFS-like search to matrix multiplying the edges value for rach path to USD, 
+     * as we know that every currency can be converted to USD
      * @param s
      * @return  
      */
